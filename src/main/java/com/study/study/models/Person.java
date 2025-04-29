@@ -1,4 +1,4 @@
-package com.study.study.entity;
+package com.study.study.models;
 
 import jakarta.persistence.*;
 
@@ -6,8 +6,19 @@ import jakarta.persistence.*;
 @Table(name = "person")
 public class Person {
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(
+            name = "id",
+            updatable = false
+    )
+    @SequenceGenerator(
+            name = "person_sequence",
+            sequenceName = "person_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "person_sequence"
+    )
     private int id;
 
     @Column(name = "firstname")

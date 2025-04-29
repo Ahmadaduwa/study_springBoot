@@ -1,13 +1,13 @@
 package com.study.study.controllers;
 
-import com.study.study.entity.Person;
+import com.study.study.models.Person;
 import com.study.study.services.PersonService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/person")
 public class ApiController {
 
     private final PersonService personService;
