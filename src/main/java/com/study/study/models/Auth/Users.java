@@ -1,8 +1,6 @@
 package com.study.study.models.Auth;
 
-import com.study.study.models.Mission;
 import jakarta.persistence.*;
-
 import java.util.List;
 
 @Entity

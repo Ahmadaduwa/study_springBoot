@@ -1,4 +1,3 @@
-// src/main/java/com/study/study/config/SecurityConfig.java
 package com.study.study.config;
 
 import com.study.study.component.JwtAuthFilter;
@@ -72,7 +71,7 @@ public class SecurityConfig {
                                 new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)
                         )
                 )
-                .authenticationProvider(authProvider)  // ใช้งาน provider ที่กำหนด
+                .authenticationProvider(authProvider)
                 .addFilterBefore(
                         jwtAuthFilter,
                         UsernamePasswordAuthenticationFilter.class

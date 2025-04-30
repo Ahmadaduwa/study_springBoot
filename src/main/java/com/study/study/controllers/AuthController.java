@@ -1,4 +1,3 @@
-// src/main/java/com/study/study/controller/AuthController.java
 package com.study.study.controllers;
 
 import com.study.study.component.JwtUtils;
@@ -27,7 +26,7 @@ public class AuthController {
     private UsersService usersService;
 
     @PostMapping("/login")
-    public ResponseEntity<JwtResponse> login(@RequestBody LoginRequest req) {
+    public ResponseEntity<JwtResponse> login(@org.jetbrains.annotations.NotNull @RequestBody LoginRequest req) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         req.username(), req.password()

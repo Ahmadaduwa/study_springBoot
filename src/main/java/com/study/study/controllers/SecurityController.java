@@ -1,13 +1,10 @@
 package com.study.study.controllers;
 
-import com.study.study.models.Auth.Users;
+
 import com.study.study.services.UsersService;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 public class SecurityController {
